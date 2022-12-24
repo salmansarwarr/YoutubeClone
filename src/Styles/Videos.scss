@@ -1,0 +1,35 @@
+.videos {
+    background-color: white;
+    height: 100vh;
+    width: 100%;
+    padding-top: 4rem;
+    display: flex;
+
+    &_recommended {
+        flex: 1;
+        background-color: #f9f9f9;
+        overflow-x: hidden;
+        width: 100%;
+    }
+
+    &_drawer {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 7px;
+        div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    p {
+        font-size: 11px;
+        color: black;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+}

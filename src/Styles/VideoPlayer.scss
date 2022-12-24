@@ -1,0 +1,66 @@
+@mixin media1075 {
+    @media (max-width: 1075px) {
+        @content
+    }
+}
+
+.root {
+    display: flex;
+    height: 100vh;
+    font-family: sans-serif;
+    width: 100%;
+    background-color: #f8f8f8;
+    margin-top: 64px;
+    padding: 2rem;
+    .left {
+        width: 65%;
+        height: 100%;
+        margin-right: 1rem;
+        .player {
+            width: 100%;
+            height: 30rem;
+        }
+        .name {
+            padding-top: 0.5rem;
+            background-color: white;
+            width: 100%;
+            border-bottom: 1px solid rgb(143, 143, 143);
+            padding-bottom: 0.5rem;
+            p {
+                font-family: sans-serif;
+                font-size: 1.1rem;
+                margin-bottom: 2rem;
+            }
+            &_bottom {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                @include media1075() {
+                    flex-direction: column;
+                    align-items: flex-start;
+                }
+                p {
+                    margin: 0;
+                    font-size: 90%;
+                    color:  rgb(110, 110, 110);  
+                    @include media1075() {
+                        margin-bottom: 0.7rem;
+                    } 
+                }
+            }
+        }
+    }
+    .right {
+        height: 100%;
+        width: 30%;
+        .text {
+            .name {
+                margin-bottom: 1.3rem;
+            }
+            .small {
+                font-size: 80%;
+                color:  rgb(110, 110, 110);  
+            }
+        }
+    }
+}
